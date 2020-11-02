@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Cart from './components/cart/Cart';
 
+const items = [
+  { id: 1, name: 'iPhone', price: 1009.9, qty: 1 },
+  { id: 2, name: 'Cup', price: 2.99, qty: 5 },
+  { id: 3, name: 'Radio', price: 34.95, qty: 1 },
+];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Cart initItems={items} />
     </div>
   );
 }
